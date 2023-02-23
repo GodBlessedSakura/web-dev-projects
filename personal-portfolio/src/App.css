@@ -75,12 +75,14 @@ input:focus, textarea:focus, select:focus {
 }
 
 p.success {
-	color: green;
+	color: greenyellow;
 }
 
 p.danger {
 	color: red;
 }
+
+
 /************ Navbar Css ************/
 nav.navbar {
   padding: 18px 0;
@@ -143,7 +145,7 @@ span.navbar-text {
     transform: scale(1);
 }
 .social-icon a img {
-	width: 40%;
+	width: 45%;
 	z-index: 1;
 	transition: 0.3s ease-in-out;
 }
