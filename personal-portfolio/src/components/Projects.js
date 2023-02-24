@@ -21,13 +21,13 @@ export const Projects = () => {
     {
       title: 'Pinyou Shopping',
       description: 'Go to page',
-      pageUrl: '/shopping',
+      pageUrl: '/shopping/register',
       imgUrl: pinyouImg2,
     },
     {
       title: 'Pinyou Shopping',
       description: 'Go to page',
-      pageUrl: '/shopping',
+      pageUrl: '/shopping/list',
       imgUrl: pinyouImg3,
     },
   ]
