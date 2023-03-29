@@ -6,6 +6,9 @@ import pinyouImg3 from '../assets/img/pinyou-img3.JPG'
 import mapdiaryImg1 from '../assets/img/mapdiary-img1.JPG'
 import mapdiaryImg2 from '../assets/img/mapdiary-img2.JPG'
 import mapdiaryImg3 from '../assets/img/mapdiary-img3.JPG'
+import fantasygpt1 from '../assets/img/fantasygpt1.png'
+import fantasygpt2 from '../assets/img/fantasygpt2.png'
+import fantasygpt3 from '../assets/img/fantasygpt3.png'
 import colorSharp2 from '../assets/img/color-sharp2.png'
 import 'animate.css'
 import TrackVisibility from 'react-on-screen'
@@ -51,6 +54,26 @@ export const Projects = () => {
       imgUrl: mapdiaryImg3,
     },
   ]
+  const fantasygpt = [
+    {
+      title: 'FantasyGPT',
+      description: 'Go to page',
+      pageUrl: 'http://35.175.132.230/',
+      imgUrl: fantasygpt1,
+    },
+    {
+      title: 'FantasyGPT',
+      description: 'Go to page',
+      pageUrl: 'http://35.175.132.230/',
+      imgUrl: fantasygpt2,
+    },
+    {
+      title: 'FantasyGPT',
+      description: 'Go to page',
+      pageUrl: 'http://35.175.132.230/',
+      imgUrl: fantasygpt3,
+    },
+  ]
 
   return (
     <section className="project" id="project">
@@ -75,6 +98,9 @@ export const Projects = () => {
                       </Nav.Item>
                       <Nav.Item>
                         <Nav.Link eventKey="third">Silent Chat</Nav.Link>
+                      </Nav.Item>
+                      <Nav.Item>
+                        <Nav.Link eventKey="forth">FantasyGPT</Nav.Link>
                       </Nav.Item>
                     </Nav>
                     <Tab.Content id="slideInUp" className={isVisible ? 'animate__animated animate__slideInUp' : ''}>
@@ -112,6 +138,17 @@ export const Projects = () => {
                           </ul>
                           Unfortunately, Wechat does not offer any API to directly log in to account and fetch conversation details. Otherwise, this chatbot tool would be more useful and practical. Looking forward to someday when Wechat can provide such APIs.
                         </p>
+                      </Tab.Pane>
+                      <Tab.Pane eventKey="forth">
+                        <p>FantasyGPT is a ChatGPT mirror webpage. It utilizes GPT-3.5-turbo model for generalizing conversations. Compared with ChatGPT, it performs better in context-saving. You can use the following guest account to have a try!</p>
+                        <p>Data storage for guest account may not be guaranteed, and the functions for guest account is not complete (such as conversation token limit).</p>
+                        <p>Email: vip_guest@gmail.com & Password: vip_guest</p>
+
+                        <Row>
+                          {fantasygpt.map((project, index) => {
+                            return <ProjectCard key={index} {...project} />
+                          })}
+                        </Row>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>
